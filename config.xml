@@ -13,7 +13,7 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
-    <gap:plugin name="info.ivanezko.phonegap.smsplugin" version="0.2.1" />
+    <gap:plugin name="info.ivanezko.phonegap.smsplugin" />
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
