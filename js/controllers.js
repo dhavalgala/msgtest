@@ -34,11 +34,18 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function ($scope) {
-    var successCallback = function () {
-        console.log("SMS Sent");
+    var successCallback = function (data, message) {
+        $scope.data = data;
+        $scope.message = message;
+        $scope.isfail = false;
     };
-    var failureCallback = function () {
-        console.log("SMS Not Sent");
+    var failureCallback = function (data, message) {
+        $scope.data = data;
+        $scope.message = message;
+        $scope.isfail = true;
+    };
+    smsplugin.startReception: function (successCallback, failureCallback) {
+        exec(successCallback, failureCallback, 'SmsPlugin', 'RECEIVE_SMS', []);
     };
     // smsplugin.send('9029145077', "test", successCallback, failureCallback);
 
