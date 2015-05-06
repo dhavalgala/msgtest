@@ -1,5 +1,5 @@
-//var argscheck = require('cordova/argscheck'),
-//    exec = require('cordova/exec');
+var argscheck = require('cordova/argscheck'),
+    exec = require('cordova/exec');
 var smsplugin = {
     send: function (phone, message, method, successCallback, failureCallback) {
         exec(successCallback, failureCallback, 'SmsPlugin', 'SEND_SMS', [phone, message, method]);
@@ -18,4 +18,4 @@ var smsplugin = {
     }
 };
 
-//module.exports=smsplugin;
+module.exports = smsplugin;
