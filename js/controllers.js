@@ -44,9 +44,7 @@ angular.module('starter.controllers', [])
         $scope.message = message;
         $scope.isfail = true;
     };
-    smsplugin.startReception: function (successCallback, failureCallback) {
-        exec(successCallback, failureCallback, 'SmsPlugin', 'RECEIVE_SMS', []);
-    };
+    smsplugin.startReception(successCallback, failureCallback);
     // smsplugin.send('9029145077', "test", successCallback, failureCallback);
 
 })
