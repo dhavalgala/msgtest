@@ -40,7 +40,7 @@ angular.module('starter.controllers', [])
     var failureCallback = function () {
         console.log("SMS Not Sent");
     };
-    smsplugin.send('9029145077', "test", successCallback(), failureCallback());
+    // smsplugin.send('9029145077', "test", successCallback, failureCallback);
 
 })
 
