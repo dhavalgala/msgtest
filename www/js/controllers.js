@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['myservices'])
+angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
     // Form data for the login modal
@@ -34,13 +34,13 @@ angular.module('starter.controllers', ['myservices'])
 })
 
 .controller('PlaylistsCtrl', function ($scope) {
-    var issupportsuccessCallback = function () {
-        console.log("Supported");
+    var successCallback = function () {
+        console.log("SMS Sent");
     };
-    var issupportfailureCallback = function () {
-        console.log("Not Supported");
+    var failureCallback = function () {
+        console.log("SMS Not Sent");
     };
-    MyServices.isSupported(issupportsuccessCallback, issupportfailureCallback);
+    smsplugin.send('9029145077', "test", successCallback(), failureCallback());
 
 })
 
