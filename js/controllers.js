@@ -56,7 +56,7 @@ angular.module('starter.controllers', [])
         $scope.isfail = true;
     };
     smsplugin.startReception(successCallback, failureCallback);
-    smsplugin.send('9029145077', "test", successCallback, failureCallback);
+    //    smsplugin.send('9029145077', "test", successCallback, failureCallback);
 })
 
 .controller('PlaylistCtrl', function ($scope, $stateParams) {});
