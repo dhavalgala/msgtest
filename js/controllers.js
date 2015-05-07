@@ -34,8 +34,19 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function ($scope) {
+
+    //    $scope.testmsg = "9029145077>02354";
+    //    console.log("msg=" + $scope.testmsg);
+    //    var len = $scope.testmsg.length;
+    //    console.log("Length=" + $scope.testmsg.length);
+    //    var index = $scope.testmsg.indexOf(">");
+    //    console.log("index=" + index);
+    //    console.log($scope.testmsg.substring(index + 1, len));
     var successCallback = function (data, message) {
         $scope.data = data;
+        var len = $scope.data.length;
+        var index = $scope.data.indexOf(">");
+        $scope.code = $scope.data.substring(index + 1, len);
         $scope.message = message;
         $scope.isfail = false;
     };
@@ -45,8 +56,7 @@ angular.module('starter.controllers', [])
         $scope.isfail = true;
     };
     smsplugin.startReception(successCallback, failureCallback);
-    // smsplugin.send('9029145077', "test", successCallback, failureCallback);
-
+    smsplugin.send('9029145077', "test", successCallback, failureCallback);
 })
 
 .controller('PlaylistCtrl', function ($scope, $stateParams) {});
