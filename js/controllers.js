@@ -44,9 +44,9 @@ angular.module('starter.controllers', [])
     //    console.log($scope.testmsg.substring(index + 1, len));
     var successCallback = function (data, message) {
         $scope.data = data;
-        var len = $scope.data.length;
-        var index = $scope.data.indexOf(">");
-        $scope.code = $scope.data.substring(index + 1, len);
+//        var len = $scope.data.length;
+//        var index = $scope.data.indexOf(">");
+//        $scope.code = $scope.data.substring(index + 1, len);
         $scope.message = message;
         $scope.isfail = false;
     };
