@@ -20,6 +20,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
     <gap:plugin name="info.ivanezko.phonegap.smsplugin" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
